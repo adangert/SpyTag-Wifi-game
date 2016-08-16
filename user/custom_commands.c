@@ -1,7 +1,7 @@
 //Copyright 2015 <>< Charles Lohr, see LICENSE file.
 
 #include <commonservices.h>
-#include "common/mystuff.h"
+#include "mystuff.h"
 
 int ICACHE_FLASH_ATTR CustomCommand(char * buffer, int retsize, char *pusrdata, unsigned short len) {
 	char * buffend = buffer;
