@@ -1,0 +1,3 @@
+[submodule "esp82XX"]
+	path = esp82XX
+	url = git@github.com:con-f-use/esp82XX.git
