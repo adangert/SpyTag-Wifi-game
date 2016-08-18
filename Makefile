@@ -1,1 +1,1 @@
-esp82XX/Makefile.example
+esp82xx/Makefile.example

@@ -1,1 +1,1 @@
-../../esp82XX/web/page/menuinterface.js
+../../esp82xx/web/page/menuinterface.js

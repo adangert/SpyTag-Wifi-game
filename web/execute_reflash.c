@@ -1,1 +1,1 @@
-../esp82XX/web/execute_reflash.c
+../esp82xx/web/execute_reflash.c
