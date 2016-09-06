@@ -7,8 +7,9 @@
 #include "uart.h"
 #include "osapi.h"
 #include "espconn.h"
-#include "mystuff.h"
+#include "esp82xxutil.h"
 #include "commonservices.h"
+#include "vars.h"
 #include <mdns.h>
 
 #define procTaskPrio        0
@@ -16,19 +17,16 @@
 
 static volatile os_timer_t some_timer;
 static struct espconn *pUdpServer;
-
+usr_conf_t * UsrCfg = (usr_conf_t*)(SETTINGS.UserData);
 
 //int ICACHE_FLASH_ATTR StartMDNS();
 
-void user_rf_pre_init(void)
-{
-	//nothing.
-}
+void user_rf_pre_init(void) { /*nothing*/ }
 
 
 char * strcat( char * dest, char * src )
 {
-	return strcat(dest, src );
+    return strcat(dest, src );
 }
 
 
@@ -91,8 +89,6 @@ void user_init(void)
 
 	CSInit();
 
-
-
 	//Set GPIO16 for INput
 	WRITE_PERI_REG(PAD_XPD_DCDC_CONF,
 		(READ_PERI_REG(PAD_XPD_DCDC_CONF) & 0xffffffbc) | (uint32)0x1);     // mux configuration for XPD_DCDC and rtc_gpio0 connection
@@ -104,11 +100,11 @@ void user_init(void)
 		READ_PERI_REG(RTC_GPIO_ENABLE) & (uint32)0xfffffffe);       //out disable
 
 	SetServiceName( "espcom" );
-	AddMDNSName(    "cn8266" );
+	AddMDNSName(    "esp82xx" );
 	AddMDNSName(    "espcom" );
-	AddMDNSService( "_http._tcp",   "An ESP82XX Webserver", WEB_PORT );
-	AddMDNSService( "_espcom._udp", "ESP82XX Comunication", COM_PORT );
-	AddMDNSService( "_cn8266._udp", "ESP82XX Backend",      BACKEND_PORT );
+	AddMDNSService( "_http._tcp",    "An ESP82XX Webserver", WEB_PORT );
+	AddMDNSService( "_espcom._udp",  "ESP82XX Comunication", COM_PORT );
+	AddMDNSService( "_esp82xx._udp", "ESP82XX Backend",      BACKEND_PORT );
 
 	//Add a process
 	system_os_task(procTask, procTaskPrio, procTaskQueue, procTaskQueueLen);
@@ -128,12 +124,6 @@ void user_init(void)
 
 
 //There is no code in this project that will cause reboots if interrupts are disabled.
-void EnterCritical()
-{
-}
+void EnterCritical() { }
 
-void ExitCritical()
-{
-}
-
-
+void ExitCritical() { }
