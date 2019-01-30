@@ -1,18 +1,9 @@
-# ESP82XX basic project
+# WIFI Spy Tag game
 
-Simple firmware and tools to experiment with using submodules as a means to share common components between individual ESP8266/85 projects.
+Hey there, this is the code used for the WIFI based hide and seek/tag game using ESP8266 devices.
+The idea behind the game is that humans go and hide, while two zombies (or agents) start seeking them out.
+once a zombie comes in proximity to a human, they turn into zombies themselves. Eventually this game will
+be rebranded to a spy type of game, with more powerups and features to play around with.
 
-ESP82XX-basic is a stripped down version of @cnlohr's esp8266ws2812i2s, who deserves **all** the recognition.
-The ESP8266/8285 chips are products of Espressif and are awesome "internet of things" solutions.
-
-## Features
-
-The project provides the following basic cuntionality:
-
- - Web-Interface based on Websockets
- - Network configuration over the Web-Interface
- - Identification of other ESP moules
- - Basic GPIO toggling
- - Flashing of firmware and Web-Interface over Network
- - Fun
-
+This project is currently in basic WIP shape, if you would like to burn and test out this project however,
+more info can be found here for how to accomplish this: https://github.com/con-f-use/esp82XX-basic
