@@ -7,3 +7,7 @@ be rebranded to a spy type of game, with more powerups and features to play arou
 
 This project is currently in basic WIP shape, if you would like to burn and test out this project however,
 more info can be found here for how to accomplish this: https://github.com/con-f-use/esp82XX-basic
+
+## Hardware
+
+A [Fritzing](http://fritzing.org) diagram of the hardware is provided as a wiring reference to connect the ESP-201/ESP8266, WS2812 8 channel LED strips, buttons, an switched battery pack. Please see the `hardware` subdirectory in the repo.
