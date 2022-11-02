@@ -1,4 +1,5 @@
 # WIFI Spy Tag game
+[![Youtube video](http://img.youtube.com/vi/TjCUs_oYcsY/0.jpg)](http://www.youtube.com/watch?v=TjCUs_oYcsY "Video Title")
 
 Hey there, this is the code used for the WIFI based hide and seek/tag game using ESP8266 devices.
 The idea behind the game is that humans go and hide, while two zombies (or agents) start seeking them out.
